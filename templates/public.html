@@ -1,0 +1,21 @@
+{% extends 'public_base.html' %}
+{% block content %}
+<section class="simple-public">
+  <span class="eyebrow">PERSONAL EXPENSE TRACKER / {{ page|upper }}</span>
+  <h1>{{ page }}<em>.</em></h1>
+  {% if page|lower == 'contact' %}
+    <h2>We'd love to hear from you.</h2>
+    <p>Reach out to the Personal Expense Tracker and Analysis System team.</p>
+    <div class="contact-intro"><span class="contact-spark">✳</span><div><strong>Let's make money management simpler.</strong><small>Questions, feedback or ideas? Choose the easiest way to reach us.</small></div></div>
+    <div class="contact-grid">
+      <article class="contact-card phone-card"><div class="contact-icon" aria-hidden="true">☎</div><div class="contact-meta">PHONE LINE 01</div><h3>Give us a call</h3><a class="contact-link" href="tel:+911181081276">+91 1181081276 <span>↗</span></a><p>For a quick conversation or project enquiry.</p></article>
+      <article class="contact-card phone-card"><div class="contact-icon" aria-hidden="true">☎</div><div class="contact-meta">PHONE LINE 02</div><h3>Another way to reach us</h3><a class="contact-link" href="tel:+911409610816">+91 1409610816 <span>↗</span></a><p>We're happy to hear your suggestions.</p></article>
+      <article class="contact-card email-card"><div class="contact-icon" aria-hidden="true">✉</div><div class="contact-meta">EMAIL ADDRESS 01</div><h3>Send us an email</h3><a class="contact-link" href="mailto:pachipalapardhu@gmail.com">pachipalapardhu@gmail.com <span>↗</span></a><p>Share your questions and feedback anytime.</p></article>
+      <article class="contact-card email-card"><div class="contact-icon" aria-hidden="true">✉</div><div class="contact-meta">EMAIL ADDRESS 02</div><h3>Stay in touch</h3><a class="contact-link" href="mailto:dhanushjuturu16@gmail.com">dhanushjuturu16@gmail.com <span>↗</span></a><p>We'd love to hear what you think.</p></article>
+    </div>
+  {% else %}
+    <h2>{{ subtitle }}</h2><p>{{ body }}</p>
+  {% endif %}
+  <a class="btn btn-dark" href="{{ url_for('register') }}">Get started ↗</a>
+</section>
+{% endblock %}
